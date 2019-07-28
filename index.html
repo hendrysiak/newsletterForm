@@ -6,19 +6,38 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <link rel="stylesheet" href="./style/style.css" />
-  <title>Login</title>
+  <title>Formularz zapisów</title>
   <script src="https://kit.fontawesome.com/f1c68147f3.js"></script>
 </head>
 
 <body>
   <main>
-    <div class="rounded-user"><i class="far fa-user"></i></div>
+    <div class="rounded-user"><i class="fas fa-align-justify"></i></div>
     <form action="submit">
 
-      <h1>Sign In</h1>
-      <input class="login" type="text" class="username" placeholder="&#xf007;  Username">
-      <input class="login" type="text" class="password" placeholder="&#xf023;  Password">
-      <button>Login</button>
+      <h1>Formularz zapisów</h1>
+      <label for="group">Grupa: <input name="group" type="text" placeholder="Nazwa grupy"></label>
+
+      <label for="chief">Szef ekipy: <input class="chief" name='chief' type="text" placeholder="Imię"> <input
+          class="chief" name="chief" type="text" placeholder="Nazwisko"></label>
+      <label for="telephone">Telefon kontaktowy: <input name="telephone" type="tel" placeholder="000000000"></label>
+      <label for="mail">E-mail kontaktowy: <input name="mail" type="email" placeholder="domena@domena.com"></label>
+      <label for="mail">Ilość członków: <input name="mail" list="people" class="people">
+        <datalist id='people'>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+        </datalist></label>
+      <span></span>
+      <section class="users"></section>
+      <button>Wyślij</button>
 
     </form>
 
