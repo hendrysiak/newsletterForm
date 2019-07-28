@@ -1,5 +1,5 @@
 :root {
-    --main-color: #3993ad;
+    --main-color: #ad3939;
 }
 
 * {
@@ -24,7 +24,7 @@ main {
     align-content: center;
     align-items: center;
     justify-content: center;
-    background-image: url(https://www.tokkoro.com/picsup/2964569-abstract-colorful-warm-colors-blurred-soft-gradient___abstract-wallpapers.jpg);
+    background-image: url(https://cdn.pixabay.com/photo/2017/09/22/23/57/fire-2777580_960_720.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -43,8 +43,8 @@ main {
 }
 
 form {
-    width: 25%;
-    height: 50%;
+    width: 75%;
+    height: 75%;
     padding-bottom: 30px;
     background-color: rgba(100%, 100%, 100%, 25%);
     border-radius: 20px;
