@@ -18,17 +18,19 @@ h1 {
   text-align: center;
 }
 
+body {
+  background-image: url(https://cdn.pixabay.com/photo/2017/09/22/23/57/fire-2777580_960_720.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 main {
-  width: 100vw;
-  height: 100vh;
   display: flex;
   flex-direction: column;
   align-content: center;
   align-items: center;
   justify-content: center;
-  background-image: url(https://cdn.pixabay.com/photo/2017/09/22/23/57/fire-2777580_960_720.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
+
 }
 
 .rounded-user {
@@ -46,9 +48,10 @@ main {
 
 form {
   width: 75%;
-  height: 75%;
-  padding-bottom: 30px;
-  background-color: rgba(100%, 100%, 100%, 25%);
+  height: 90%;
+
+  padding: 10px 10px 30px 10px;
+  background-color: rgba(100%, 100%, 100%, 50%);
   border-radius: 20px;
   display: flex;
   flex-direction: row;
@@ -65,7 +68,9 @@ label {
   font-size: 25px;
 }
 
-input {
+input,
+select {
+  margin: 5px;
   border-radius: 10px;
   border: 0px solid;
   width: 80%;
@@ -75,6 +80,11 @@ input {
   font-size: 30px;
   box-shadow: none;
 }
+
+option {
+  color: gray;
+}
+
 .chief {
   width: 35.5%;
 }
@@ -90,11 +100,23 @@ button {
   border: none;
   font-size: 30px;
 }
+
 span {
+
   display: block;
+  margin: 5px;
   background-color: var(--main-color);
   height: 3px;
   width: 90%;
+}
+
+.users label {
+  width: 100%;
+  margin: 5px;
+}
+
+.users label input {
+  width: 25%;
 }
 
 .hidden {

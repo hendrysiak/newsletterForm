@@ -1,16 +1,39 @@
-const form = document.querySelector('form');
-const usersNumber = document.getElementsByClassName('people');
-const usersList = document.getElementsByClassName('users');
-const formContent = [...document.getElementsByTagName('input')];
+const form = document.querySelector("form");
+const usersNumber = document.querySelector(".people");
+const usersList = document.querySelector(".users");
 
-// usersNumber.addEventListener('change', () => {
-//     const value = usersNumber.value * 1;
+function inputCreator(person) {
+  const label = document.createElement("label");
+  const inputName = document.createElement("input");
+  const inputSurname = document.createElement("input");
+  const inputAdress = document.createElement("input");
+  inputName.placeholder = "Imię";
+  inputName.required = true;
+  inputSurname.placeholder = "Nazwisko";
+  inputSurname.required = true;
+  inputAdress.placeholder = "Adress";
+  inputAdress.required = true;
+  const labelContent = [inputName, inputSurname, inputAdress];
+  label.textContent = `Osoba ${person}`;
+  labelContent.forEach(input => {
+    label.appendChild(input);
+  });
+  usersList.appendChild(label);
+}
 
-// })
+inputCreator(1);
+usersNumber.addEventListener("change", () => {
+  const value = usersNumber.value;
+  usersList.textContent = "";
+  for (let i = 1; i <= value; i++) {
+    inputCreator(i);
+  }
+});
 
-form.addEventListener('submit', (event) => {
-    console.log(formContent);
+form.addEventListener("submit", event => {
+  const formContent = [...document.getElementsByTagName("label")];
+  console.log(formContent);
 
-    event.preventDefault();
-    // formContent.forEach(content => content.classList.add('hidden'))
-})
+  event.preventDefault();
+  //   formContent.forEach(content => content.classList.add("hidden"));
+});

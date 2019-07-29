@@ -16,14 +16,15 @@
     <form action="submit">
 
       <h1>Formularz zapisów</h1>
-      <label for="group">Grupa: <input name="group" type="text" placeholder="Nazwa grupy"></label>
+      <label for="group">Grupa: <input name="group" type="text" placeholder="Nazwa grupy" required></label>
 
-      <label for="chief">Szef ekipy: <input class="chief" name='chief' type="text" placeholder="Imię"> <input
-          class="chief" name="chief" type="text" placeholder="Nazwisko"></label>
-      <label for="telephone">Telefon kontaktowy: <input name="telephone" type="tel" placeholder="000000000"></label>
-      <label for="mail">E-mail kontaktowy: <input name="mail" type="email" placeholder="domena@domena.com"></label>
-      <label for="mail">Ilość członków: <input name="mail" list="people" class="people">
-        <datalist id='people'>
+      <label for="chief">Szef ekipy: <input class="chief" name='chief' type="text" placeholder="Imię" required> <input
+          class="chief" name="chief" type="text" placeholder="Nazwisko" required></label>
+      <label for="telephone">Telefon kontaktowy: <input name="telephone" type="tel" placeholder="000000000" required
+          minlength="9"></label>
+      <label for="mail">E-mail kontaktowy: <input name="mail" type="email" placeholder="domena@domena.com" required
+          minlength="5"></label>
+      <label for="people">Ilość członków: <select name="people" list="people" class="people" required>
           <option value="1">1</option>
           <option value="2">2</option>
           <option value="3">3</option>
@@ -34,7 +35,7 @@
           <option value="8">8</option>
           <option value="9">9</option>
           <option value="10">10</option>
-        </datalist></label>
+        </select></label>
       <span></span>
       <section class="users"></section>
       <button>Wyślij</button>
